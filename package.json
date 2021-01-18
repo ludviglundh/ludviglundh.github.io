@@ -2,6 +2,12 @@
   "name": "ludviglundhio",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -11,28 +17,36 @@
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@lundh/eslint-config": "https://github.com/ludviglundh/lundh.eslintconfig.git#develop",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.2",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "webpack": "^4.44.1"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "@lundh/eslint-config",
+    "rules": {
+      "jsx-a11y/anchor-is-valid": [
+        "off"
+      ]
+    }
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "!(*]).js": [
+      "eslint",
+      "prettier  --write"
     ]
   }
 }
