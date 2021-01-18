@@ -6,7 +6,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write '**/*.js'"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
@@ -24,10 +25,9 @@
   "devDependencies": {
     "@lundh/eslint-config": "https://github.com/ludviglundh/lundh.eslintconfig.git#develop",
     "eslint": "^7.18.0",
-    "husky": "^4.2.2",
+    "husky": "^4.3.8",
     "lint-staged": "^10.0.7",
-    "prettier": "^1.19.1",
-    "webpack": "^4.44.1"
+    "prettier": "^2.2.1"
   },
   "eslintConfig": {
     "extends": "@lundh/eslint-config",
@@ -51,6 +51,18 @@
     "!(*]).js": [
       "eslint",
       "prettier  --write"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   }
 }
