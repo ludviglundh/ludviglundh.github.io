@@ -2,7 +2,7 @@
   "name": "ludviglundhio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ludviglundh.dev",
+  "homepage": "https://github.com/ludviglundh/ludviglundh.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "@lundh/eslint-config": "https://github.com/ludviglundh/lundh.eslintconfig.git#develop",
     "eslint": "^7.18.0",
+    "gh-pages": "^3.1.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1"
