@@ -2,7 +2,7 @@
   "name": "ludviglundhio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/ludviglundh/ludviglundh.github.io",
+  "homepage": "https://ludviglundh.dev",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
