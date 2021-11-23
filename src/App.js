@@ -1,23 +1,19 @@
-import React from 'react'
-import logo from './logo.svg'
 import './App.css'
+import React from 'react'
+import { Routes, Route, Link } from 'react-router-dom'
+import { pages } from './constants'
+
+import Home from './features/home/Home'
+import About from './features/about/About'
+import Contact from './features/contact/Contact'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>🚧 Under construction 🚧</p>
-        <a
-          className="App-link"
-          href="https://github.com/ludviglundh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Link to my github page
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path={pages.home} element={<Home />} />
+      <Route path={pages.about} element={<About />} />
+      <Route path={pages.contact} element={<Contact />} />
+    </Routes>
   )
 }
 

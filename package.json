@@ -21,6 +21,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
+    "react-router-dom": "6",
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
     "styled-components": "^5.2.1",
@@ -34,28 +35,31 @@
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1"
   },
-  "eslintConfig": {
+  "eslint": {
     "extends": "@lundh/eslint-config",
     "rules": {
-      "jsx-a11y/anchor-is-valid": [
-        "off"
-      ]
+      "import/order": "always"
     }
   },
   "prettier": {
     "semi": false,
     "singleQuote": true,
-    "trailingComma": "all"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "!(*]).js": [
-      "eslint",
-      "prettier  --write"
+    "trailingComma": "all",
+    "arrowParens": "avoid",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": false,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": [
+          "none",
+          "all",
+          "multiple",
+          "single"
+        ],
+        "allowSeparatedGroups": false
+      }
     ]
   },
   "browserslist": {
